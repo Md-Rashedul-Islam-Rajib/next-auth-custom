@@ -24,6 +24,8 @@ const userSchema = new mongoose.Schema({
     },
     verifyToken: String,
     verifyTokenExpired: Date,
+},{
+    collection: "allUsers",
 });
 
 const user = mongoose.models.allUsers || mongoose.model("allUsers",userSchema);
