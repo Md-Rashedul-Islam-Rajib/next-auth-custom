@@ -24,5 +24,8 @@ const userSchema = new mongoose.Schema({
     },
     verifyToken: String,
     verifyTokenExpired: Date,
-})
+});
 
+const user = mongoose.models.allUsers || mongoose.model("allUsers",userSchema);
+
+export default user;
