@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     default: Date.now,
     },
     isVerified: {
-        type: boolean,
+        type: Boolean,
         default: false,
     },
     verifyToken: String,
@@ -28,6 +28,6 @@ const userSchema = new mongoose.Schema({
     collection: "allUsers",
 });
 
-const user = mongoose.models.allUsers || mongoose.model("allUsers",userSchema);
+const User = mongoose.models.allUsers || mongoose.model("allUsers",userSchema);
 
 export default user;
